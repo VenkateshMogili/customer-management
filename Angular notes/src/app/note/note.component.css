@@ -1,0 +1,36 @@
+.take_notes{
+    border:2px solid lightgray;
+    padding: 10px;
+    margin: 45px;
+    border-radius:10px;
+    box-shadow: 1px 2px 10px gray;
+}
+.take_notes input{
+    width:90%;
+    border:0;
+    background-color:transparent;
+}
+.take_notes input:focus{
+    outline:none;
+}
+.results{
+    display:block;
+    width:784px;
+}
+.example-card {
+    width: 200px;
+    max-height:270px;
+    min-height:150px;
+    overflow:hidden;
+    border:1px solid transparent;
+    border-radius:10px;
+    display:inline-block;
+    margin:10px;
+  }
+.example-card:hover{
+    box-shadow:1px 2px 10px gray;
+}
+.image_notes{
+    width:200px;
+    height:200px;
+}

@@ -1,0 +1,7 @@
+<div class="take_notes" style="box-shadow:none;border:0;margin:0">
+        <input type="text"  mat-dialog-title placeholder="Title" style="font-size:20px;" [(ngModel)]="data.title" name="title"/><br/><br/>
+        <input type="text" mat-dialog-title placeholder="Take a note..." style="font-size:16px;" [(ngModel)]="data.notes" name="notes" autofocus/><br/><br/>
+    <div mat-dialog-actions style="float:right">
+        <button mat-button style="float:right" [mat-dialog-close]="data" (click)="save()">Close</button>
+    </div>
+</div>

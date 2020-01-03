@@ -1,0 +1,36 @@
+<div class="container" style="margin-left:20%;margin-right:20%;">
+
+    <div class="take_notes" *ngIf="!visible">
+        <input type="text" placeholder="Take a note..." style="font-size:16px;" (click)="displayNotes()"/>
+
+        <label for="file-input"> <mat-icon style="float:right;cursor:pointer">image</mat-icon></label>
+        <input id="file-input" type="file" style="display:none;" />
+    </div>
+    <div class="take_notes" *ngIf="visible">
+        <form novalidate>
+        <input type="text" placeholder="Title" style="font-size:20px;" [(ngModel)]="tasks.title" name="title"/><br/><br/>
+        <input type="text" placeholder="Take a note..." style="font-size:16px;" [(ngModel)]="tasks.notes" name="notes" autofocus/><br/><br/>
+        <button mat-button style="float:right" type="button" (click)="saveData(tasks.title,tasks.notes)">Close</button><br/><br/>
+        </form>
+    </div>
+    <div class="results">
+            <!-- <input type="file" name="photo" ng2FileSelect [uploader]="uploader" />
+ button to trigger the file upload when submitted 
+<button type="button" class="btn btn-success btn-s"
+      (click)="uploader.uploadAll()" 
+      [disabled]="!uploader.getNotUploadedItems().length">
+      Upload with ng-2 file uploader
+</button> -->
+
+            <mat-card class="example-card" *ngFor="let task of tasks" (click)="editTask(task.id,task.title,task.notes)">
+                <mat-card-content *ngIf="task.image">
+                    <img src="../../assets/{{task.image}}" class="image_notes"/>
+                </mat-card-content>
+                <mat-card-title *ngIf="task.title">{{task.title}}</mat-card-title>
+                <mat-card-content *ngIf="task.notes">
+                    <p>{{task.notes}}</p>
+                </mat-card-content>
+                <!-- <mat-icon style="position:absolute;bottom:2%;right:2%;border:1px solid gray;border-radius:100px;cursor:pointer;" (click)="deleteTask(task.id)">delete</mat-icon> -->
+            </mat-card>
+    </div>
+</div>

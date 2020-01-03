@@ -1,0 +1,28 @@
+<mat-toolbar color="default">
+        <mat-toolbar-row style="border-bottom:1px solid lightgray;position:fixed;width:100%;z-index:10;background-color:white;">
+          <button mat-icon-button>
+            <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+          </button>
+          <h1 style="opacity:0.9"><img src="../../assets/notes.png" style="width:30px;height:30px;margin:0 5px 0 5px;float:left;"/>Notes</h1>
+          <span class="menu-spacer"></span>
+          <span class="example-spacer"></span>
+          <div>
+              <input type="text" placeholder="Search..." class="search"/>
+          </div>
+          <mat-icon>person</mat-icon>
+        </mat-toolbar-row>
+      </mat-toolbar>
+
+  <mat-sidenav-container>
+        <mat-sidenav #sidenav>
+          <mat-nav-list>
+            <a mat-list-item [routerLink]="'/notes'"  (click)="sidenav.toggle()" class="active"> <mat-icon>edit</mat-icon> &nbsp;&nbsp;&nbsp;&nbsp; Notes </a>
+            <a mat-list-item [routerLink]="'/'"  (click)="sidenav.toggle()"> <mat-icon>add_alert</mat-icon> &nbsp;&nbsp;&nbsp;&nbsp; Reminders </a>
+          </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content>
+          <div style="height: auto;">
+            <router-outlet></router-outlet>
+          </div>
+        </mat-sidenav-content>
+      </mat-sidenav-container>
