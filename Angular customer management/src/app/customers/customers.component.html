@@ -1,0 +1,27 @@
+<app-header></app-header>
+<div style="margin:10px">
+<h2><img src="../../assets/user.png" style="width:50px;height:50px"/>Customers</h2>
+
+<!-- Customers navs -->
+<nav class="navbar navbar-expand-lg navbar-light bg-none">
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" routerLink="/cardView"><i class="fa fa-th-large" aria-hidden="true"></i> Card View</a>
+            </li>
+            <li class="nav-item">
+                    <a class="nav-link" routerLink="/listView"><i class="fa fa-align-justify" aria-hidden="true"></i> List View</a>
+                  </li>
+            <li class="nav-item">
+                    <a class="nav-link" routerLink="/addCustomer"><i class="fa fa-plus"></i> New Customer</a>
+                  </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+                <span class="my-2 my-sm-0">Filter: &nbsp;</span>
+            <input class="form-control mr-sm-2"  type="text" [ngModel]="searchInput" name="searchInput" (ngModelChange)="filterCustomer($event)" aria-label="Search">
+          </form>
+        </div>
+      </nav>
+</div>
+<router-outlet></router-outlet>

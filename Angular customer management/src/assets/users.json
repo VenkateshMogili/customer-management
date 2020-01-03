@@ -1,0 +1,12 @@
+[
+    {
+        "username":"Venkatesh Mogili",
+        "email":"v@gmail.com",
+        "password":"v"
+    },
+    {
+        "username":"Admin",
+        "email":"admin@gmail.com",
+        "password":"admin"
+    }
+]

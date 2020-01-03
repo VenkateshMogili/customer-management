@@ -1,0 +1,14 @@
+.active{
+    color:gray!important;
+    background-color:white!important;
+    border-radius:10px;
+}
+li a{
+    color:white;
+}
+li a:hover{
+    color:lightgray!important;
+}
+.navbar-brand{
+    color:white;
+}

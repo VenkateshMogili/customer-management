@@ -1,0 +1,92 @@
+<app-header></app-header>
+<br/>
+<div class="container">
+        <h2><img src="../../assets/user.png" style="width:50px;height:50px"/>Add Customer</h2>
+</div>
+<div class="container">
+    <form style="width:50%" #angForm="ngForm" novalidate (ngSubmit)="addCustomer()">
+  <div class="form-group">
+    <label for="firstName">First Name</label>
+    <input type="text" class="form-control" [(ngModel)]="customer.firstname" name="firstname" id="firstName" autofocus required>
+  </div>
+  <div class="form-group">
+    <label for="lastName">Last Name</label>
+    <input type="text" class="form-control" [(ngModel)]="customer.lastname" name="lastname" id="lastName" required>
+  </div>
+        <label for="lastName">Gender</label>
+  <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" checked [(ngModel)]="customer.gender" value="male" id="male" name="gender" required>
+        <label class="custom-control-label" for="male">Male</label>
+      </div>
+      
+      <!-- Group of default radios - option 2 -->
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" [(ngModel)]="customer.gender" value="female" id="female" name="gender" required>
+        <label class="custom-control-label" for="female">Female</label>
+      </div>
+
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" class="form-control" [(ngModel)]="customer.email" name="email" id="email" required>
+  </div>
+  <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" [(ngModel)]="customer.password" name="password" id="password" required>
+      </div>
+  <div class="form-group">
+    <label for="address">Address</label>
+    <input type="text" class="form-control" [(ngModel)]="customer.address" name="address" id="address" required>
+  </div>
+  <div class="form-group">
+    <label for="city">City</label>
+    <input type="text" class="form-control" [(ngModel)]="customer.city" name="city" id="city" required>
+  </div>
+  <div class="form-group">
+    <label for="state">State</label>
+    <select id="state" class="form-control" [(ngModel)]="customer.state" name="state" required>
+            <option value="">------------Select State------------</option>
+<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+<option value="Andhra Pradesh">Andhra Pradesh</option>
+<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+<option value="Assam">Assam</option>
+<option value="Bihar">Bihar</option>
+<option value="Chandigarh">Chandigarh</option>
+<option value="Chhattisgarh">Chhattisgarh</option>
+<option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+<option value="Daman and Diu">Daman and Diu</option>
+<option value="Delhi">Delhi</option>
+<option value="Goa">Goa</option>
+<option value="Gujarat">Gujarat</option>
+<option value="Haryana">Haryana</option>
+<option value="Himachal Pradesh">Himachal Pradesh</option>
+<option value="Jammu and Kashmir">Jammu and Kashmir</option>
+<option value="Jharkhand">Jharkhand</option>
+<option value="Karnataka">Karnataka</option>
+<option value="Kerala">Kerala</option>
+<option value="Lakshadweep">Lakshadweep</option>
+<option value="Madhya Pradesh">Madhya Pradesh</option>
+<option value="Maharashtra">Maharashtra</option>
+<option value="Manipur">Manipur</option>
+<option value="Meghalaya">Meghalaya</option>
+<option value="Mizoram">Mizoram</option>
+<option value="Nagaland">Nagaland</option>
+<option value="Orissa">Orissa</option>
+<option value="Pondicherry">Pondicherry</option>
+<option value="Punjab">Punjab</option>
+<option value="Rajasthan">Rajasthan</option>
+<option value="Sikkim">Sikkim</option>
+<option value="Tamil Nadu">Tamil Nadu</option>
+<option value="Tripura">Tripura</option>
+<option value="Uttaranchal">Uttaranchal</option>
+<option value="Uttar Pradesh">Uttar Pradesh</option>
+<option value="West Bengal">West Bengal</option>
+    </select>
+  </div>
+  <div class="float-right">
+  <button type="button" class="btn btn-default" routerLink="/cardView">Cancel</button>&nbsp;&nbsp;
+  <button type="submit" class="btn btn-success" [disabled]="angForm.form.invalid">Add</button>
+  </div>
+</form>
+</div>
+<br/><br/>
+        
