@@ -22,7 +22,7 @@
   "homepage": "https://github.com/hemantkumar2/Xelp-intranet#readme",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-fileupload": "^1.1.6",
     "jade": "^1.11.0",
     "multer": "^1.4.2",
